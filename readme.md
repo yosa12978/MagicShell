@@ -1,5 +1,9 @@
 # Magic Shell
-
+#### Unix shell made with Go
+[![GitHub issues](https://img.shields.io/github/issues/yosa12978/MagicShell?style=flat-square)](https://github.com/yosa12978/MagicShell/issues)
+[![GitHub forks](https://img.shields.io/github/forks/yosa12978/MagicShell?style=flat-square)](https://github.com/yosa12978/MagicShell/network)
+[![GitHub stars](https://img.shields.io/github/stars/yosa12978/MagicShell?style=flat-square)](https://github.com/yosa12978/MagicShell/stargazers)
+[![GitHub license](https://img.shields.io/github/license/yosa12978/MagicShell?style=flat-square)](https://github.com/yosa12978/MagicShell/blob/master/LICENSE)
 
 ## License
 

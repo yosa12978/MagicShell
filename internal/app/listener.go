@@ -5,16 +5,28 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/user"
 	"strings"
 
 	"github.com/yosa12978/MagicShell/internal/app/handlers"
+	"github.com/yosa12978/MagicShell/pkg/helpers"
 )
 
 func Run() {
 	mainHandler := handlers.MainHandler{}
-	reader := bufio.NewScanner(os.Stdin)
 
-	mainHandler.ClearHandler()
+	userdir, _ := os.UserHomeDir()
+	os.Chdir(userdir)
+
+	user, err := user.Current()
+	if err != nil {
+		log.Fatal(err.Error())
+		os.Exit(1)
+	}
+
+	helpers.PrintLogo(user.Username)
+
+	reader := bufio.NewScanner(os.Stdin)
 
 	for {
 		dir, err := os.Getwd()
@@ -22,7 +34,7 @@ func Run() {
 			log.Fatal(err)
 			break
 		}
-		fmt.Printf("%s [ ", dir)
+		fmt.Printf("%s --> ", dir)
 
 		reader.Scan()
 		data := reader.Text()
@@ -44,6 +56,8 @@ func Run() {
 			mainHandler.TouchHandler(info[1])
 		case "mkdir":
 			mainHandler.MkdirHandler(info[1])
+		case "cat":
+			mainHandler.CatHandler(info[1:])
 		default:
 			mainHandler.ProgrammHandler(info)
 

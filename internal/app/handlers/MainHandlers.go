@@ -71,3 +71,14 @@ func (mh *MainHandler) MkdirHandler(name string) {
 	}
 	fmt.Printf("Dir %s created\n", name)
 }
+
+func (mh *MainHandler) CatHandler(filenames []string) {
+	for _, name := range filenames {
+		file, err := ioutil.ReadFile(name)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		fmt.Println(string(file))
+	}
+}
