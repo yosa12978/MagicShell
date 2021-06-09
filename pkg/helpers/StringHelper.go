@@ -13,12 +13,12 @@ func ConcatArray(arr []string) []string {
 				if strings.HasSuffix(arr[j], "\"") {
 					var readyString string
 					if i != j {
-						readyString = strings.Join(arr[i:j], " ")
+						readyString = strings.Replace(strings.Join(arr[i:j+1], " "), "\"", "", -1)
 					} else {
 						readyString = arr[i]
 					}
 					arr = append(arr[:i], arr[j+1:]...)
-					fmt.Println(arr)
+					fmt.Printf("\n%s\n", arr)
 					i = j + 1
 					arr = append(arr, readyString)
 				}
