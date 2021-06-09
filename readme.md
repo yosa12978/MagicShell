@@ -1,4 +1,18 @@
 # Magic Shell
+```  
+ ███╗   ███╗ █████╗  ██████╗ ██╗ ██████╗
+ ████╗ ████║██╔══██╗██╔════╝ ██║██╔════╝
+ ██╔████╔██║███████║██║  ███╗██║██║
+ ██║╚██╔╝██║██╔══██║██║   ██║██║██║
+ ██║ ╚═╝ ██║██║  ██║╚██████╔╝██║╚██████╗
+ ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝ ╚═════╝
+ ███████╗██╗  ██╗███████╗██╗     ██╗
+ ██╔════╝██║  ██║██╔════╝██║     ██║
+ ███████╗███████║█████╗  ██║     ██║
+ ╚════██║██╔══██║██╔══╝  ██║     ██║
+ ███████║██║  ██║███████╗███████╗███████╗
+ ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ 
+```
 #### Unix shell made with Go
 [![GitHub issues](https://img.shields.io/github/issues/yosa12978/MagicShell?style=flat-square)](https://github.com/yosa12978/MagicShell/issues)
 [![GitHub forks](https://img.shields.io/github/forks/yosa12978/MagicShell?style=flat-square)](https://github.com/yosa12978/MagicShell/network)

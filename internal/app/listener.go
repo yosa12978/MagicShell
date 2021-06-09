@@ -63,7 +63,7 @@ func Run() {
 		case "getenv":
 			mainHandler.GetenvHandler(info[1])
 		default:
-			mainHandler.ProgrammHandler(info)
+			mainHandler.ProgrammHandler(helpers.ConcatArray(info))
 
 		}
 	}
