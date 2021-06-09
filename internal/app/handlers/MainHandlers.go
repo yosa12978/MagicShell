@@ -3,6 +3,7 @@ package handlers
 import (
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -47,6 +48,7 @@ func (mh *MainHandler) ProgrammHandler(info []string) {
 	cmd := exec.Command(info[0], info[1:]...)
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout
+	cmd.Stdin = os.Stdin
 	err := cmd.Run()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
@@ -81,4 +83,18 @@ func (mh *MainHandler) CatHandler(filenames []string) {
 		}
 		fmt.Println(string(file))
 	}
+}
+
+func (mh *MainHandler) SetenvHandler(key string, value string) {
+	err := os.Setenv(key, value)
+	if err != nil {
+		log.Fatal(err.Error())
+		return
+	}
+	fmt.Printf("Created env var %s\n", key)
+}
+
+func (mh *MainHandler) GetenvHandler(key string) {
+	res := os.Getenv(key)
+	fmt.Println(res)
 }

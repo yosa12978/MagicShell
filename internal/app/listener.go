@@ -40,7 +40,7 @@ func Run() {
 		data := reader.Text()
 		info := strings.Split(data, " ")
 
-		switch info[0] {
+		switch strings.ToLower(info[0]) {
 
 		case "cd":
 			mainHandler.CdHandler(info[1:])
@@ -58,6 +58,10 @@ func Run() {
 			mainHandler.MkdirHandler(info[1])
 		case "cat":
 			mainHandler.CatHandler(info[1:])
+		case "setenv":
+			mainHandler.SetenvHandler(info[1], info[2])
+		case "getenv":
+			mainHandler.GetenvHandler(info[1])
 		default:
 			mainHandler.ProgrammHandler(info)
 
