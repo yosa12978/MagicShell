@@ -15,7 +15,7 @@ func ConcatArray(arr []string) []string {
 					if i != j {
 						readyString = strings.Replace(strings.Join(arr[i:j+1], " "), "\"", "", -1)
 					} else {
-						readyString = arr[i]
+						readyString = strings.Replace(arr[i], "\"", "", -1)
 					}
 					arr = append(arr[:i], arr[j+1:]...)
 					fmt.Printf("\n%s\n", arr)

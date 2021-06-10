@@ -1,0 +1,16 @@
+MAGIC SHELL
+
+Default commands:
+    * cd - changes directory; cd ./hello/
+    * ls - returns files in current directory
+    * touch - creates file; eg: touch file.txt
+    * cat - returns file(-s) text; eg: cat file.txt
+    * clear - clears shell
+    * echo - returns arguments; eg: echo hello
+    * mkdir - creates file in current foldier; eg: mkdir hello
+    * exit - exit program
+    * setenv - sets env variable; eg: setenv key value
+    * getenv - returns env variable; eg: getenv key
+    * md5 - returns md5 hash of file; eg: md5 file.txt
+    * sha256 - returns sha256 hash of file; eg: sha256 file.txt
+    * sha1 - returns sha1 hash of file; eg: sha1 file.txt

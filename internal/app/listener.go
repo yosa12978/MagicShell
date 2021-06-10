@@ -62,6 +62,14 @@ func Run() {
 			mainHandler.SetenvHandler(info[1], info[2])
 		case "getenv":
 			mainHandler.GetenvHandler(info[1])
+		case "sha256":
+			mainHandler.Sha256Handler(strings.Join(info[1:], " "))
+		case "sha1":
+			mainHandler.Sha1Handler(strings.Join(info[1:], " "))
+		case "md5":
+			mainHandler.MD5Handler(strings.Join(info[1:], " "))
+		case "help":
+			mainHandler.HelpHandler()
 		default:
 			mainHandler.ProgrammHandler(helpers.ConcatArray(info))
 
